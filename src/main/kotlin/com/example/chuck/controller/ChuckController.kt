@@ -9,6 +9,7 @@ class ChuckController() {
 
     lateinit var jokesService: JokesService
 
+    @RequestMapping("")
     fun funnyQuote(model: Model): String {
         model.addAttribute("joke", jokesService.getJoke() )
 
